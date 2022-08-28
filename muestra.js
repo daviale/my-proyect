@@ -24,16 +24,20 @@ const notascursos = data.notascursos;
 
 
 const mostrarAlumosSalon = (nombreSalon) => { 
-   
-    const salon = salones.filter(e => e.nombre === nombreSalon);
 
+    const salon = salones.filter(e => e.nombre === nombreSalon);
+    if(salon.length <= 0) return console.log("no se encontro salon")
+    
     const resultado = salon[0].idalumno.map((value)=>{ 
         return value = alumnos.find(al => al.id === value)
     });
 
-    return console.log(resultado);
-    // console.log(salon)
+    console.log(resultado)
+    return resultado
 } 
 
 
-mostrarAlumosSalon("scp20")
+
+module.exports = {
+    mostrarAlumosSalon : mostrarAlumosSalon
+}
