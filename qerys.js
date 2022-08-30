@@ -9,13 +9,13 @@ const notascursos = data.notascursos;
 
 
 const mostrartotodoslosAlumnos=() =>{
- return console.log(alumnos);
+ return (alumnos);
 }
 
 const mostartodoslosProfesores=() =>{
 
     profesores.forEach(prof =>{
-        return console.log("profesor:"+prof.nombres )
+        return ("profesor:"+prof.nombres )
     })
 }
 
@@ -103,14 +103,17 @@ const  informaciondeSalon=(idsalon) => {
 
 
 const mostrarAlumosSalon = (nombreSalon) => { 
-
+     
+    // filtrando el salon
     const salon = salones.filter(e => e.nombre === nombreSalon);
     if(salon.length <= 0) return console.log("no se encontro salon")
     
+    // transformar id de alumnos a modelo alumno
     const resultado = salon[0].idalumno.map((value)=>{ 
         return value = alumnos.find(al => al.id === value)
     });
 
+    //resultado = arreglo de alumnos
     return resultado
 } 
 

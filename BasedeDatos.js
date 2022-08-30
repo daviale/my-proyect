@@ -47,7 +47,7 @@ module.exports = universidad = {
       salon: "tcpc22",
     },
   ],
-  notas: [{ idalumno: "a1", n1: 13 }],
+ 
 
   salones: [
     {

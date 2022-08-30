@@ -1,17 +1,27 @@
-// MENU
-const type = require("./types");
-const qery = require("./muestra")
+const inquirer = require("inquirer");
+const type = require("./types.js")
+const views = require("./views")
 
 
+inquirer.prompt({
+    type: 'rawlist',
+    name: 'resp',
+    message: 'Que quieres hacer?',
+    choices: [type.VIEW_STUDENT_INFO,type.VIEW_STUDENT_NOTE,type.VIEW_STUDENT_ROOM]
+}).then(answers => {
+    // //answers = {resp:"VIEW_STUDENT_INFO"}
+    switch (answers.resp) {
+        case type.VIEW_STUDENT_INFO:
+            views.mostrarAlumnosSalonView("scp20")
+            return;
 
-switch ("GET_ALL_STUDENTS") {
-    case type.GET_STUDENT:
-        return;
+        case type.VIEW_STUDENT_NOTE:
+            return;
 
-    case type.GET_ALL_STUDENTS:
-        qery.mostrarAlumosSalon("")
-        return;
-        
-    default:
-        return false
-}
+        case type.VIEW_STUDENT_ROOM:
+            return;    
+        default:
+            break;
+    }
+   
+})
