@@ -39,7 +39,7 @@ const mostrarAlumosSalon = (nombreSalon) => {
 
 
 module.exports = {
-    mostrarAlumnos : mostrarAlumosSalons
+    mostrarAlumnos : mostrarAlumosSalon
 }
  
 

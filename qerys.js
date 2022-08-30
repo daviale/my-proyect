@@ -161,6 +161,6 @@ const  informaciondeSalon=(idsalon) => {
 	});
 }
 
-informaciondeSalon("s1")
+
 
 

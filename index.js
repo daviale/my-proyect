@@ -1,17 +1,27 @@
 const inquirer = require("inquirer");
+const type = require("./types.js")
+const qerys = require("./muestra")
+
 
 inquirer.prompt({
     type: 'rawlist',
-    name: 'colors',
+    name: 'resp',
     message: 'Que quieres hacer?',
-    choices: ['1111','2222','3333']
+    choices: [type.VIEW_STUDENT_INFO,type.VIEW_STUDENT_NOTE,type.VIEW_STUDENT_ROOM]
 }).then(answers => {
-    if(answers.colors === "1111"){
-        inquirer.prompt({
-            type: 'rawlist',
-            name: 'result',
-            message: 'Seleccione una opcion',
-            choices: ['a','b','b']
-        })
+    // //answers = {resp:"VIEW_STUDENT_INFO"}
+    switch (answers.resp) {
+        case type.VIEW_STUDENT_INFO:
+            qerys.mostrarAlumnos("scp20")
+            return;
+
+        case type.VIEW_STUDENT_NOTE:
+            return;
+
+        case type.VIEW_STUDENT_ROOM:
+            return;    
+        default:
+            break;
     }
+   
 })
