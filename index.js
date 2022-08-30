@@ -1,7 +1,5 @@
-
 const inquirer = require("inquirer");
 
-// {colors: "11111"}
 inquirer.prompt({
     type: 'rawlist',
     name: 'colors',
@@ -13,8 +11,7 @@ inquirer.prompt({
             type: 'rawlist',
             name: 'result',
             message: 'Seleccione una opcion',
-            choices: ['a','b','c']
+            choices: ['a','b','b']
         })
     }
-    // dasdsads
 })
