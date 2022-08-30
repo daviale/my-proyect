@@ -3,13 +3,13 @@ module.exports = universidad = {
     {
       id: "p3",
       nombres: "ysln NY",
-      cursos: "fisica1",
+      cursos: ["fisica1"],
       salon: "tcpc23",
     },
     {
       id: "p2",
       nombres: "jaun TP",
-      cursos: "ingles",
+      cursos: ["ingles"],
       salon: "tcpc22",
     },
 
@@ -19,46 +19,6 @@ module.exports = universidad = {
       cursos: ["quimica1","algebra"],
       salon: "tcpc21",
     },
-  ],
-  notascursos: [
-    {
-      idalumno: "a1",
-      promedio : [17,13,16,18,21]
-    },
-    {
-      idalumno: "a2",
-      promedio : [18,13,16,18,22]
-    },
-    {
-      idalumno: "a3",
-      promedio : [17,20,16,18,23]
-    },
-    {
-      idalumno: "a4",
-      promedio : [17,13,16,18,24]
-    },
-  ],
-  cursos: [
-    {
-      id: "c1",
-      nombre: "fisica1",
-      profesor:"p3"
-    },
-    {
-      id: "c2",
-      nombre: "ingles",
-      profesor:"p2"
-    },
-    {
-      id: "c3",
-      nombre: "quimica",
-      profesor:"p1"
-    },
-    {
-      id: "c4",
-      nombre: "algebra",
-      profesor:"p1"
-  }
   ],
   alumnos: [
     {

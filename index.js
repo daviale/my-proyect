@@ -1,6 +1,6 @@
 const inquirer = require("inquirer");
 const type = require("./types.js")
-const qerys = require("./muestra")
+const renderizar = require("./renderizar")
 
 
 inquirer.prompt({

@@ -7,147 +7,84 @@ const cursos = data.cursos;
 const notascursos = data.notascursos;
 
 
-// /////////////////////////ver todos los alumnos:
 
+const mostrartotodoslosAlumnos=() =>{
+ return console.log(alumnos);
+}
 
-// const mostrartotodoslosAlumnos=() =>{
-//  console.log(alumnos);
-// }
+const mostartodoslosProfesores=() =>{
 
-// mostrartotodoslosAlumnos();
+    profesores.forEach(prof =>{
+        return console.log("profesor:"+prof.nombres )
+    })
+}
 
+const mostrartodosloSalones=()=>{
+    salones.forEach(salon=> {
+            return console.log("salon:" + salon.nombre)
+        }
+    )
+}
 
+const mostrartodoslosCursos=()=>{
 
-/////////////////////////mostrar todos los profesores
+    cursos.forEach(curso => {
+        return console.log("curso:" + curso.nombre)
 
+    });
+}
 
-// const mostartodoslosProfesores=() =>{
+const mostrarUnAlumno=()=>{
+    const resultado =  alumnos.filter((alumno => alumno.nombres ));
+    if (resultado.length <= 0) {
+        return console.log("no se encontraron resultados")
+    }
+    return console.log(resultado[2]) ;
 
-//     profesores.forEach(prof =>{
-//         console.log("profesor:"+prof.nombres )
-//     })
-// }
+}
 
-// mostartodoslosProfesores();
+ const mostarUnProfesor=() =>{
 
+    const resultado =  profesores.filter((profesor => profesor.nombres ));
+    if (resultado.length <= 0) {
+        return console.log("no se encontraron resultados")
+    }
+    return console.log(resultado[2]) ;
+    }
 
-/////////////////////////mostrar todos los salones
+    const mostrarUnSalon=()=>{
+        const resultado =  salones.filter((salon => salon.nombres ));
+        if (resultado.length <= 0) {
+            return console.log("no se encontraron resultados")
+        }
+        return console.log(resultado[2]) ;
+    }
 
-
-// const mostrartodosloSalones=()=>{
-//     salones.forEach(salon=> {
-//             console.log("salon:" + salon.nombre)
-//         }
-//     )
-// }
-
-// mostrartodosloSalones();
-
-
-
-/////////////////////////mostrar todos los cursos
-
-// const mostrartodoslosCursos=()=>{
-
-//     cursos.forEach(curso => {
-//         console.log("curso:" + curso.nombre)
-
-//     });
-// }
-
-// mostrartodoslosCursos();
-
-
-
-/////////////////////////mostrar un alumno
-
-// const mostrarUnAlumno=()=>{
-//     const resultado =  alumnos.filter((alumno => alumno.nombres ));
-//     if (resultado.length <= 0) {
-//         return console.log("no se encontraron resultados")
-//     }
-//     return console.log(resultado[2]) ;
-
-// }
-
-
-
-/////////////////////////mostrar un profesor
-
-//  const mostarUnProfesor=() =>{
-
-//     const resultado =  profesores.filter((profesor => profesor.nombres ));
-//     if (resultado.length <= 0) {
-//         return console.log("no se encontraron resultados")
-//     }
-//     return console.log(resultado[2]) ;
-//     }
-
-//     mostarUnProfesor();
-
-
-
-/////////////////////////mostrar un salon
-
-//     const mostrarUnSalon=()=>{
-//         const resultado =  salones.filter((salon => salon.nombres ));
-//         if (resultado.length <= 0) {
-//             return console.log("no se encontraron resultados")
-//         }
-//         return console.log(resultado[2]) ;
-//     }
-
-//     mostrarUnSalon();
-
-
-
-
-
-///////////////////////// al ver 1 alumno:
-		// debo ver, su salon
-		// debo ver sus notas
-		// debo ver sus datos personales
-
-// const mostardatoAlumno=(idalumno) =>{
-// alumnos.forEach(al => {
-//   if (al.id  === idalumno) {
-//     notascursos.forEach(nota => {
-//         if (nota.idalumno === idalumno) {
-//             console.log(" Notas de cursos: mat ing alge fisi quiimica" + "  "+  nota.promedio )
-//         }
-//     });
-//     console.log( "Nombres:"+ al.nombres ,
-//                  "salon:" + al.salon,
-//                  )
-//   }   
-// });
-// }
-// mostardatoAlumno("a1");
-
-
-///////////////////////// al ver 1 profesor
-// al ver un profesor debo ver:
-// 		sus datos personales
-// 		los cursos que enseña
-// 		el salon asignado
+const mostardatoAlumno=(idalumno) =>{
+alumnos.forEach(al => {
+  if (al.id  === idalumno) {
+    notascursos.forEach(nota => {
+        if (nota.idalumno === idalumno) {
+            console.log(" Notas de cursos: mat ing alge fisi quiimica" + "  "+  nota.promedio )
+        }
+    });
+    return console.log( "Nombres:"+ al.nombres ,
+                 "salon:" + al.salon,
+                 )
+  }   
+});
+}
 	
-//    mostrarinfoDeMaestro=( idprofesor)=>{
-// profesores.forEach(prof => {
-// if (prof.id=== idprofesor ) {
-//     console.log("nombre del profesor:" + prof.nombres,
-//                  "cursos: "+ prof.cursos ,
-//                  "salon asignado" + prof.salon )
-// }
-// });
-//    }
-//    mostrarinfoDeMaestro("p2");
+   mostrarinfoDeMaestro=( idprofesor)=>{
+profesores.forEach(prof => {
+if (prof.id=== idprofesor ) {
+    return console.log("nombre del profesor:" + prof.nombres,
+                 "cursos: "+ prof.cursos ,
+                 "salon asignado" + prof.salon )
+}
+});
+   }
 
-//////######/////////////////// al ver 1 salon
-
-// al ver un salon debo ver:
-// 		datos del salon
-// 		que alumnos estan en el salon
-// 		que profesor está asignado
 
 const  informaciondeSalon=(idsalon) => {
 
@@ -164,3 +101,21 @@ const  informaciondeSalon=(idsalon) => {
 
 
 
+
+const mostrarAlumosSalon = (nombreSalon) => { 
+
+    const salon = salones.filter(e => e.nombre === nombreSalon);
+    if(salon.length <= 0) return console.log("no se encontro salon")
+    
+    const resultado = salon[0].idalumno.map((value)=>{ 
+        return value = alumnos.find(al => al.id === value)
+    });
+
+    return resultado
+} 
+
+
+
+module.exports = {
+    mostrarAlumosSalon : mostrarAlumosSalon
+}
