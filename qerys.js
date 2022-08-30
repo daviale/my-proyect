@@ -7,6 +7,7 @@ const cursos = data.cursos;
 const notascursos = data.notascursos;
 
 
+
 const mostrartotodoslosAlumnos=() =>{
  return console.log(alumnos);
 }
@@ -83,6 +84,22 @@ if (prof.id=== idprofesor ) {
 }
 });
    }
+
+
+const  informaciondeSalon=(idsalon) => {
+
+	salones.filter(s => {
+		idsalon  == s.id ? console.log("nombre de salon" + s.nombre,
+		                                                    ) : 0 
+	alumnos.forEach(a => { 
+		s.idalumno === a.id  ? console.log("alumno" + a.nombres ) : 0
+		console.log(s.id)
+	});
+	});
+}
+
+
+
 
 
 const mostrarAlumosSalon = (nombreSalon) => { 
