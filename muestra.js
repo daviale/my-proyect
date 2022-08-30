@@ -23,6 +23,7 @@ const notascursos = data.notascursos;
 // mostrarAlumosSalon("s1")
 
 
+// ess query
 const mostrarAlumosSalon = (nombreSalon) => { 
 
     const salon = salones.filter(e => e.nombre === nombreSalon);

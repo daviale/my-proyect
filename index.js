@@ -12,7 +12,7 @@ inquirer.prompt({
     // //answers = {resp:"VIEW_STUDENT_INFO"}
     switch (answers.resp) {
         case type.VIEW_STUDENT_INFO:
-            qerys.mostrarAlumnos("scp20")
+            renderizar.mostrarAlumnosView("scp20")
             return;
 
         case type.VIEW_STUDENT_NOTE:
