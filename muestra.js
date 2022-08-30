@@ -39,5 +39,8 @@ const mostrarAlumosSalon = (nombreSalon) => {
 
 
 module.exports = {
-    mostrarAlumosSalon : mostrarAlumosSalon
+    mostrarAlumnos : mostrarAlumosSalons
 }
+ 
+
+

@@ -69,7 +69,7 @@ const notascursos = data.notascursos;
 //     return console.log(resultado[2]) ;
 
 // }
-// mostrarUnAlumno();
+
 
 
 /////////////////////////mostrar un profesor
