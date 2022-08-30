@@ -142,13 +142,25 @@ const notascursos = data.notascursos;
 //    }
 //    mostrarinfoDeMaestro("p2");
 
-///////////////////////// al ver 1 salon
+//////######/////////////////// al ver 1 salon
 
 // al ver un salon debo ver:
 // 		datos del salon
 // 		que alumnos estan en el salon
 // 		que profesor está asignado
 
+const  informaciondeSalon=(idsalon) => {
 
-   
-   
+	salones.filter(s => {
+		idsalon  == s.id ? console.log("nombre de salon" + s.nombre,
+		                                                    ) : 0 
+	alumnos.forEach(a => { 
+		s.idalumno === a.id  ? console.log("alumno" + a.nombres ) : 0
+		console.log(s.id)
+	});
+	});
+}
+
+informaciondeSalon("s1")
+
+
