@@ -11,7 +11,7 @@ inquirer
     choices: [
       type.VIEW_TEACHER_INFO,
       type.VIEW_STUDENT_PER_ROOM,
-      type.VIEW_TEACHER_ROOM,
+      type.VIEW_SALON,
     ],
   })
   .then((answers) => {
@@ -24,9 +24,13 @@ inquirer
       case type.VIEW_STUDENT_PER_ROOM:
         views.mostrarAlumnosSalonView("tcpc21");
         return;
+      
+      case type.VIEW_SALON:
+        views.mostarSalonView("s1");
+      return  
 
-      case type.VIEW_TEACHER_ROOM:
-        return;
+      // crear otro caso
+
       default:
         break;
     }

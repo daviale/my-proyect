@@ -29,12 +29,28 @@ const muestrameinfoDelProfesor =(idprofesor) => {
     )
 }
 
+const mostarSalonView = (idSalon) => {
+    const salon = qerys.mostarSalon(idSalon);
+    console.log(">>>Datos de Salon")
+    console.log("id: ", salon.id)
+    console.log("nombre: ", salon.nombre)
+    console.log(">>>Estudiantes de Salon")
+    salon.idalumno.forEach((al, index)=>{
+        console.log("   >>>Estudiante ", ++index)
+        console.log("       id: ", al.id)
+        console.log("       nombres: ", al.nombres)
+        console.log("       salon: ", al.salon)
+        console.log("       promedio: ", al.promedio)
+    })
+}
+
 
 
 
 module.exports = {
     mostrarAlumnosSalonView: mostrarAlumnosSalonView,
     muestrameinfoDelProfesor : muestrameinfoDelProfesor,
+    mostarSalonView: mostarSalonView
 }
 
 

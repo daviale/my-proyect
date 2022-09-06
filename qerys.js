@@ -37,23 +37,27 @@ const mostrartodoslosCursos=()=>{
 ///////////////////////////////////////////////
 
 
-const  informaciondeSalon=(idsalon) => {
+// al ver un salon debo ver:
+    // datos del salon
+    // que alumnos estan en el salon
+    // que profesor está asignado
 
-	salones.filter(s => {
-		idsalon  == s.id ? console.log("nombre de salon" + s.nombre,
-		                                                    ) : 0 
-	alumnos.forEach(a => { 
-		s.idalumno === a.id  ? console.log("alumno" + a.nombres ) : 0
-		console.log(s.id)
-	});
-	});
+
+const mostarSalon=  (idsalon) => {
+
+    const salon =  salones.filter((s)=>{
+        // aca tu codigo
+        if(s.id === idsalon){
+            return s
+        }
+    });
+
+    const alumnos = mostrarAlumosSalon(salon[0].nombre);
+
+    salon[0].idalumno = alumnos;
+
+   return salon[0]
 }
-
-
-
-
-
-
 
 const mostrarAlumosSalon = (nombreSalon) => { 
      
@@ -76,12 +80,6 @@ const mostrarAlumosSalon = (nombreSalon) => {
  
 } 
 
-
-
-
-
-
-
 const mostrarinfoDeProfesor=( idprofesor)=>{
 
     const datoProfesor = profesores.filter(prof =>  prof.id == idprofesor);
@@ -90,12 +88,9 @@ const mostrarinfoDeProfesor=( idprofesor)=>{
 }
 
 
-
-
-
-
 module.exports = {
     mostrarAlumosSalon : mostrarAlumosSalon,
     mostrarinfoDeProfesor : mostrarinfoDeProfesor,
+    mostarSalon: mostarSalon
 }
 
