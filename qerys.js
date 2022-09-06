@@ -8,20 +8,20 @@ const notascursos = data.notascursos;
 
 
 
-const mostrartotodoslosAlumnos=() =>{
+const mostrartodoslosAlumnos=() =>{
  return (alumnos);
 }
 
 const mostartodoslosProfesores=() =>{
 
     profesores.forEach(prof =>{
-        return ("profesor:"+prof.nombres )
+       
     })
 }
 
 const mostrartodosloSalones=()=>{
     salones.forEach(salon=> {
-            return console.log("salon:" + salon.nombre)
+            
         }
     )
 }
@@ -29,61 +29,12 @@ const mostrartodosloSalones=()=>{
 const mostrartodoslosCursos=()=>{
 
     cursos.forEach(curso => {
-        return console.log("curso:" + curso.nombre)
+        
 
     });
 }
 
-const mostrarUnAlumno=()=>{
-    const resultado =  alumnos.filter((alumno => alumno.nombres ));
-    if (resultado.length <= 0) {
-        return console.log("no se encontraron resultados")
-    }
-    return console.log(resultado[2]) ;
-
-}
-
- const mostarUnProfesor=() =>{
-
-    const resultado =  profesores.filter((profesor => profesor.nombres ));
-    if (resultado.length <= 0) {
-        return console.log("no se encontraron resultados")
-    }
-    return console.log(resultado[2]) ;
-    }
-
-    const mostrarUnSalon=()=>{
-        const resultado =  salones.filter((salon => salon.nombres ));
-        if (resultado.length <= 0) {
-            return console.log("no se encontraron resultados")
-        }
-        return console.log(resultado[2]) ;
-    }
-
-const mostardatoAlumno=(idalumno) =>{
-alumnos.forEach(al => {
-  if (al.id  === idalumno) {
-    notascursos.forEach(nota => {
-        if (nota.idalumno === idalumno) {
-            console.log(" Notas de cursos: mat ing alge fisi quiimica" + "  "+  nota.promedio )
-        }
-    });
-    return console.log( "Nombres:"+ al.nombres ,
-                 "salon:" + al.salon,
-                 )
-  }   
-});
-}
-	
-   mostrarinfoDeMaestro=( idprofesor)=>{
-profesores.forEach(prof => {
-if (prof.id=== idprofesor ) {
-    return console.log("nombre del profesor:" + prof.nombres,
-                 "cursos: "+ prof.cursos ,
-                 "salon asignado" + prof.salon )
-}
-});
-   }
+///////////////////////////////////////////////
 
 
 const  informaciondeSalon=(idsalon) => {
@@ -102,23 +53,49 @@ const  informaciondeSalon=(idsalon) => {
 
 
 
+
+
 const mostrarAlumosSalon = (nombreSalon) => { 
      
     // filtrando el salon
     const salon = salones.filter(e => e.nombre === nombreSalon);
-    if(salon.length <= 0) return console.log("no se encontro salon")
+    // console.log("<<<<<<<<<<<<<<<<<<<<<salom"  + salon);
+    if(salon.length <= 0) {
+        console.log("no se encontro salon")
+        return []
+    }
     
     // transformar id de alumnos a modelo alumno
     const resultado = salon[0].idalumno.map((value)=>{ 
-        return value = alumnos.find(al => al.id === value)
+                return value = alumnos.find(al => al.id === value)
+                
     });
-
+// console.log(">>>>>>>>>>>>>>>>>>resultado" + resultado);
     //resultado = arreglo de alumnos
     return resultado
+ 
 } 
 
 
 
-module.exports = {
-    mostrarAlumosSalon : mostrarAlumosSalon
+
+
+
+
+const mostrarinfoDeProfesor=( idprofesor)=>{
+
+    const datoProfesor = profesores.filter(prof =>  prof.id == idprofesor);
+    return datoProfesor
+    
 }
+
+
+
+
+
+
+module.exports = {
+    mostrarAlumosSalon : mostrarAlumosSalon,
+    mostrarinfoDeProfesor : mostrarinfoDeProfesor,
+}
+

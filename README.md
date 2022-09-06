@@ -43,4 +43,63 @@ El sistema debe permitir:
 	
 	
 	
+    //   const sumat = alumnos.map( al {
+    //  })
+      
+     
 
+
+  //   const erere = salones.find(sal => {
+  //     return sal.id === idsalon
+  //   } )
+  // console.log(  'profesor ' + sal.);
+
+  
+  //  salones.find( sal =>  { sal.id === idsalon ? 
+    // console.log('salon' +  sal.nombre, 'alumnos ' +  sal.idalumno  ) : 0 ;
+  
+    
+
+// return   sal.id === 's2'  ? console.log('bien') : 0;
+   
+
+// profesores.find ( prof => { sal.idprofesor === prof.id ? console.log('profe'+ prof.nombres) : 0;
+// })
+
+     const sumadeData = salones.map( sal => {
+      return  sal.idalumno + 'ww'
+    
+
+
+  // ) 
+  //  console.log(data);
+  // const data = salones.map( sal =>  { 
+  //   return sal + 'el'
+  // }) 
+  // console.log(data);
+
+
+
+  
+          
+        //  const infoguardada =  alumnos.map( (al) => al + "etel"  );
+        // console.log("dffdgfdgdgd" +  infoguardada  );
+          
+        
+
+
+        // const infoguardada =  alumnos.map( (al) => al   );
+        // console.log( infoguardada[1]  );
+
+
+			//   salones.find(sal => { idsalon === sal.id ?
+      //         console.log("salon: " + sal.nombre, "alumnos:"  ) :  0;
+          
+      //   //   []
+      //    const infoguardada = alumnos.map( al => {   }
+        
+      //     );
+      //      console.log(infoguardada);
+                                                                     
+          
+      // });
