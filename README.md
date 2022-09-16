@@ -36,7 +36,8 @@ El sistema debe permitir:
 
 
 
-	
+	comentarios 
+    - si el app es en ingles todo el app debe estar en ingles 
 		
 	
 	
