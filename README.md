@@ -17,8 +17,6 @@ crear un arreglo de profesores
 crear un arreglo de alumnos
 
 El sistema debe permitir:
-	ver 1 solo salon profesor,alumno o curso
-	ver todos los salones, profesores, alumnos, cursos
 	
 	al ver 1 alumno:
 		debo ver, su salon
