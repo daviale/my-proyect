@@ -31,6 +31,8 @@ const muestrameinfoDelProfesor =(idprofesor) => {
 
 const mostarSalonView = (idSalon) => {
     const salon = qerys.mostarSalon(idSalon);
+    if(!salon) return;
+    
     console.log(">>>Datos de Salon")
     console.log("id: ", salon.id)
     console.log("nombre: ", salon.nombre)

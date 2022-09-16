@@ -43,21 +43,7 @@ const mostrartodoslosCursos=()=>{
     // que profesor está asignado
 
 
-const mostarSalon=  (idsalon) => {
 
-    const salon =  salones.filter((s)=>{
-        // aca tu codigo
-        if(s.id === idsalon){
-            return s
-        }
-    });
-
-    const alumnos = mostrarAlumosSalon(salon[0].nombre);
-
-    salon[0].idalumno = alumnos;
-
-   return salon[0]
-}
 
 const mostrarAlumosSalon = (nombreSalon) => { 
      
@@ -85,6 +71,26 @@ const mostrarinfoDeProfesor=( idprofesor)=>{
     const datoProfesor = profesores.filter(prof =>  prof.id == idprofesor);
     return datoProfesor
     
+}
+
+const mostarSalon=  (idsalon) => {
+
+    const salon =  salones.filter((s)=>{
+        // aca tu codigo
+        if(s.id === idsalon){
+            return s
+        }
+    });
+
+    if(salon.length === 0){
+        console.log("no se encontró el salon")
+        return  
+    }else {
+        const alumnos = mostrarAlumosSalon(salon[0].nombre);
+        salon[0].idalumno = alumnos;
+        return salon[0]
+    }
+   
 }
 
 

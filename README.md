@@ -23,26 +23,21 @@ El sistema debe permitir:
 	al ver 1 alumno:
 		debo ver, su salon
 		debo ver sus notas
-		debo ver sus datos personales
+		debo ver sus datos personales // 100 %
 	
 	al ver un profesor debo ver:
 		sus datos personales
 		los cursos que enseña
-		el salon asignado
+		el salon asignado // 100 %
 	
 	al ver un salon debo ver:
 		datos del salon
 		que alumnos estan en el salon
-		que profesor está asignado
+		que profesor está asignado // 100 %
 
-	al ver curso debo ver:
-		datos del curso
-		que profesores, enseñan este curso
-		
-	
-	
-	
-	
+
+
+
     //   const sumat = alumnos.map( al {
     //  })
       

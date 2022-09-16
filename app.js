@@ -26,7 +26,7 @@ inquirer
         return;
       
       case type.VIEW_SALON:
-        views.mostarSalonView("s1");
+        views.mostarSalonView("s2");
       return  
 
       // crear otro caso
