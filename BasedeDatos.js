@@ -3,7 +3,7 @@ module.exports = universidad = {
     {
       id: "p1",
       nombres: "ysln NY",
-      cursos: ["fisica1"],
+      cursos: ["fisica"],
       salon: "tcpc23",
     },
     {
@@ -16,7 +16,7 @@ module.exports = universidad = {
     {
       id: "p3",
       nombres: "andre CD",
-      cursos: ["quimica1","algebra"],
+      cursos: ["quimica","algebra"],
       salon: "tcpc21",
     },
   ],
@@ -59,19 +59,19 @@ module.exports = universidad = {
     {
       id: "s1",
       nombre: "tcpc21",
-      idalumno: ["a1", "a2"],
+      alumno: ["a1", "a2"],
       idprofesor: "p1",
     },
     {
       id: "s2",
       nombre: "tcpc22",
-      idalumno:["a3","a4"],
+      alumno:["a3","a4"],
       idprofesor: "p2",
     },
     {
       id: "s3",
       nombre: "tcpc23",
-      idalumno: ["a5"],
+      alumno: ["a5"],
       idprofesor: "p3",
     },
   ],

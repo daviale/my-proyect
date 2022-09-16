@@ -1,4 +1,5 @@
 // const { salones } = require("./BasedeDatos.js");
+const { Console } = require("console");
 const data = require("./BasedeDatos.js");
 const alumnos = data.alumnos;
 const profesores = data.profesores;
@@ -25,23 +26,7 @@ const mostrartodosloSalones=()=>{
         }
     )
 }
-
-const mostrartodoslosCursos=()=>{
-
-    cursos.forEach(curso => {
-        
-
-    });
-}
-
-///////////////////////////////////////////////
-
-
-// al ver un salon debo ver:
-    // datos del salon
-    // que alumnos estan en el salon
-    // que profesor está asignado
-
+    
 
 const mostarSalon=  (idsalon) => {
 
@@ -54,7 +39,7 @@ const mostarSalon=  (idsalon) => {
 
     const alumnos = mostrarAlumosSalon(salon[0].nombre);
 
-    salon[0].idalumno = alumnos;
+    salon[0].alumno = alumnos;
 
    return salon[0]
 }
@@ -70,7 +55,7 @@ const mostrarAlumosSalon = (nombreSalon) => {
     }
     
     // transformar id de alumnos a modelo alumno
-    const resultado = salon[0].idalumno.map((value)=>{ 
+    const resultado = salon[0].alumno.map((value)=>{ 
                 return value = alumnos.find(al => al.id === value)
                 
     });
@@ -81,16 +66,20 @@ const mostrarAlumosSalon = (nombreSalon) => {
 } 
 
 const mostrarinfoDeProfesor=( idprofesor)=>{
-
+   
     const datoProfesor = profesores.filter(prof =>  prof.id == idprofesor);
+    
     return datoProfesor
     
 }
 
 
+
+
 module.exports = {
     mostrarAlumosSalon : mostrarAlumosSalon,
     mostrarinfoDeProfesor : mostrarinfoDeProfesor,
-    mostarSalon: mostarSalon
+    mostarSalon: mostarSalon,
+    
 }
 

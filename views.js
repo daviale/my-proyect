@@ -35,7 +35,7 @@ const mostarSalonView = (idSalon) => {
     console.log("id: ", salon.id)
     console.log("nombre: ", salon.nombre)
     console.log(">>>Estudiantes de Salon")
-    salon.idalumno.forEach((al, index)=>{
+    salon.alumno.forEach((al, index)=>{
         console.log("   >>>Estudiante ", ++index)
         console.log("       id: ", al.id)
         console.log("       nombres: ", al.nombres)
@@ -47,10 +47,12 @@ const mostarSalonView = (idSalon) => {
 
 
 
+
 module.exports = {
     mostrarAlumnosSalonView: mostrarAlumnosSalonView,
     muestrameinfoDelProfesor : muestrameinfoDelProfesor,
-    mostarSalonView: mostarSalonView
+    mostarSalonView: mostarSalonView,
+    
 }
 
 
