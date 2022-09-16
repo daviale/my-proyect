@@ -29,7 +29,7 @@ inquirer
         views.mostarSalonView("s1");
       return  
 
-      // crear otro caso
+      // subida
 
       default:
         break;
