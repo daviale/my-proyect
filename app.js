@@ -12,6 +12,7 @@ inquirer
       type.VIEW_TEACHER_INFO,
       type.VIEW_STUDENT_PER_ROOM,
       type.VIEW_SALON,
+      
     ],
   })
   .then((answers) => {
@@ -29,9 +30,6 @@ inquirer
         views.mostarSalonView("s2");
       return  
 
-      // crear otro caso
-
-      default:
-        break;
+     
     }
   });

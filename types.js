@@ -16,11 +16,12 @@ module.exports = {
     VIEW_TEACHER_ROOM: 'VIEW_TEACHER_ROOM',
 
     // SALON
-    VIEW_SALON: 'Mostar salon por nombre'
+    VIEW_SALON: 'Mostar salon por nombre',
+   
+
+
+  
 }
 
 
 
-// types for salones
-
-// types for profesores

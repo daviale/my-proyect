@@ -1,7 +1,7 @@
 {
   "name": "proyec",
   "version": "1.0.0",
-  "description": "",
+  "description": "Por falta de control de datos de los estudiantes,\r la univercidad Russbell quiere implementar un sistema \r para el control de notas y alumnos.",
   "main": "copiaaaa.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,6 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "inquirer": "^8.0.0"
-  }
+    "inquirer": "^8.0.0",
+    "node": "^18.9.0"
+  },
+  "devDependencies": {}
 }
