@@ -52,9 +52,6 @@ module.exports = universidad = {
       promedio:"14"
     },
   ],
- 
-  
-
   salones: [
     {
       id: "s1",

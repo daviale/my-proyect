@@ -37,7 +37,7 @@ const mostarSalonView = (idSalon) => {
     console.log("id: ", salon.id)
     console.log("nombre: ", salon.nombre)
     console.log(">>>Estudiantes de Salon")
-    salon.alumno.forEach((al, index)=>{
+    salon.idalumno.forEach((al, index)=>{
         console.log("   >>>Estudiante ", ++index)
         console.log("       id: ", al.id)
         console.log("       nombres: ", al.nombres)

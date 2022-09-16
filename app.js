@@ -16,7 +16,6 @@ inquirer
     ],
   })
   .then((answers) => {
-    // //answers = {resp:"VIEW_STUDENT_INFO"}
     switch (answers.resp) {
       case type.VIEW_TEACHER_INFO:
         views.muestrameinfoDelProfesor("p1");
