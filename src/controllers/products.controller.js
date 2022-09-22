@@ -21,8 +21,15 @@ export const getProducts = async (req , res) =>{
 
 }
 export const getProductBy = async (req , res) =>{
- const product= await Product.findById(req.params.productId);
-res.status(200).json(product)
+  try {
+
+    const product= await Product.findById(req.params.productId);
+    res.status(200).json(product)
+    
+  } catch (error) {
+    console.log(error);
+  }
+ 
 }
 export const updateProductBy = async (req , res) =>{
 

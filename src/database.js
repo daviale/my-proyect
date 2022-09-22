@@ -5,4 +5,10 @@ mongoose.connect("mongodb://127.0.0.1:27017/Api")
 .catch(error => console.log(error))
 
 
+// comandos que usa en el video
+// ,{
+//     userNewUrlParser:true,
+//     useUnifiedTopology:true,
+//     userFindAndModify:true
+// }
 
