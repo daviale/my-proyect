@@ -8,5 +8,5 @@ authJwt.isAdmin
 ], userCtrl.createUser)
 
 
-
+ 
 export default router;

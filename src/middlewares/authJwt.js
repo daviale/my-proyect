@@ -36,7 +36,7 @@ import Role from '../models/Role'
             return res.status(403).json({message:"Requerided Moderator role"})
 
 
-    // console.log(roles);
+    console.log(roles);
 
 
  }
